@@ -41,9 +41,10 @@ def comparison(old_df, new_df, key_column):
 column_names = ['Record ID', 'Company name', 'Company Owner', 'Create Date', 'Last Activity Date', 'Industry', 'First Deal Created Date', 'Country', 'Lifecycle Stage', 'Company Field', 'Geo', 'Bridge', 'Building']
 old_df, new_df = load_data()
 
-newly_created = new_db(old_df, new_df)
 
 if old_df is not None and new_df is not None:
+    newly_created = new_db(old_df, new_df)
+    
     Lifecycle_db = comparison(old_df,new_df, 'Lifecycle Stage')
     Bridge_db = comparison(old_df,new_df, 'Bridge')
     Geo_db = comparison(old_df,new_df, 'Geo')
