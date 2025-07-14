@@ -37,6 +37,15 @@ def comparison(old_df, new_df, key_column):
 
     return comparison_df
 
+st.title("DB Tracker")
+st.markdown("""
+해당 앱은 두 개의 엑셀 파일을 업로드하여 데이터베이스의 변화를 추적하는 기능을 제공합니다.
+- **Old CSV file**: 이전 데이터베이스 파일
+- **New CSV file**: 새로운 데이터베이스 파일
+            
+업로드 되어야 할 파일은 가희 프로님께 요청하여 받아야 하며, 파일 column 순서가 기존 세팅과 같아야 합니다.
+파일 Column(Hubs DB Property) 순서는 다음과 같습니다:
+- Record ID / Company name / Company Owner / Create Date / Last Activity Date / Industry / First Deal Created Date / Country / Lifecycle Stage / Company Field / Overseas Lifecycle Stage_Geo / Overseas Lifecycle Stage_Bridge / Overseas Lifecycle Stage_Building""")
 
 column_names = ['Record ID', 'Company name', 'Company Owner', 'Create Date', 'Last Activity Date', 'Industry', 'First Deal Created Date', 'Country', 'Lifecycle Stage', 'Company Field', 'Geo', 'Bridge', 'Building']
 old_df, new_df = load_data()
